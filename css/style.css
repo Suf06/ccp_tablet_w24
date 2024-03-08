@@ -1,0 +1,191 @@
+H1 {
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    margin: 5%;
+    font-weight: bolder;
+}
+
+H2 {
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    color: blue;
+}
+
+H3 {
+    font-size: large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: darkred;
+}
+
+P {
+    line-height: 150%;
+}
+
+img {
+    border: 5px solid red;
+    padding: 10px;
+    margin: 20px;
+}
+ul {
+    list-style-type: square;
+}
+
+ol {
+    list-style-type: square;
+}
+
+ul.li {
+    display: inline-block;
+    margin-left: 50px;
+    list-style-type: square;
+}
+nav ul {
+    list-style-type: none;
+    margin: 3%;
+    font-size: large;
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+    padding-bottom: 3%;
+}
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    outline: none;
+}
+
+nav a:focus,
+nav a:hover {
+    color: #007bff;
+}
+
+nav a.active {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+nav a:focus,
+nav a:hover {
+    outline: 2px solid #007bff;
+}
+
+.skip {
+	position: absolute;
+	left: -1000px;
+}
+
+.skip:focus {
+    left: auto;
+    top: auto;
+    overflow: visible;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 90%;
+    grid-gap: 20px;
+    padding: 20px;
+    margin: auto;
+}
+
+.grid-container.video-content {
+    border: 5px solid rgb(153, 36, 36);
+    padding: 10px;
+}
+
+.visually-hidden {
+    text-decoration: underline;
+    color: rgb(121, 0, 0);
+}
+
+body {
+    background-color: lightskyblue;
+}
+
+img {
+    border: 5px solid darkred;
+    padding: 10px;
+    margin: 0;
+    display: block;
+    width: 80%
+}
+
+.images {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 10px;
+
+}
+
+@media screen and (min-width: 800px) {
+    H1, H2 {
+        font-size: x-large;
+    }
+
+    p {
+        font-size: medium;
+    }
+
+    .images img {
+        max-inline-size: 75%;
+    }
+
+    .images {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        gap: 15px;
+    }
+
+    button {
+        display: inline-block;
+        padding: 20px 30px;
+        background-color: darkred;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    button:hover {
+        background-color: darkred;
+    }
+
+    h1,
+    h2,
+    p
+    img,
+    .images {
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+
+}
+
